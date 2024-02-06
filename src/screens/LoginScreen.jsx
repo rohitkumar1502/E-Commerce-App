@@ -16,6 +16,7 @@ import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 //const Logo = require('../assets/Logo.png');
 import styles from './RegisterScreen.Style';
+import LoginIcons from '../components/LoginIcons';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -27,7 +28,7 @@ const LoginScreen = () => {
         const token = await AsyncStorage.getItem('authToken');
 
         if (token) {
-          navigation.replace('');
+          navigation.replace('Main');
         }
       } catch (err) {
         console.log('error message', err);
@@ -47,7 +48,7 @@ const LoginScreen = () => {
         console.log(response);
         const token = response.data.token;
         AsyncStorage.setItem('authToken', token);
-        navigation.replace('HomePage');
+        navigation.replace('Main');
       })
       .catch(error => {
         Alert.alert('Login Error', 'Invalid Email');
@@ -117,6 +118,9 @@ const LoginScreen = () => {
           <Text style={styles.regText}>Login</Text>
         </Pressable>
       </KeyboardAvoidingView>
+      <View style={styles.sociallogin}>
+        <LoginIcons name="Sign In" />
+      </View>
     </SafeAreaView>
   );
 };

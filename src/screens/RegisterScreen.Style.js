@@ -17,11 +17,15 @@ export default StyleSheet.create({
     height: 64,
     width: 343,
     borderRadius: 5,
-    backgroundColor: '#FBF2F2',
+    backgroundColor: 'white',
     marginBottom: 18,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    shadowColor: '#522622',
+    shadowOffset: {width: 0, height: 1},
+    shadowOpacity: 0.4,
+    shadowRadius: 3,
   },
   iconssty: {
     paddingHorizontal: 8,
@@ -50,5 +54,10 @@ export default StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  sociallogin: {
+    // paddingVertical: 120,
+    position: 'absolute',
+    bottom: 50,
   },
 });

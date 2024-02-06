@@ -136,7 +136,7 @@ const RegisterScreen = () => {
           <Text style={styles.regText}>Register</Text>
         </Pressable>
       </KeyboardAvoidingView>
-      <View>
+      <View style={styles.sociallogin}>
         <LoginIcons name="Sign Up" />
       </View>
     </SafeAreaView>
