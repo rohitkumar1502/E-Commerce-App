@@ -18,6 +18,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import ProductInfoScreen from '../screens/ProductInfoScreen';
+import ConformationScreen from '../screens/ConformationScreen';
+// import AddAddressScreen from '../screens/AddAddressScreen';
+// import AddingNewAddress from '../screens/AddingNewAddress';
 
 // initialRouteName="Login"
 
@@ -49,7 +52,7 @@ const StackNavigation = () => {
           options={{
             tabBarLabel: 'Cart',
             tabBarLabelStyle: {color: '#DB3022'},
-            headerShown: false,
+            // headerShown: false,
             tabBarIcon: ({focused}) =>
               focused ? (
                 <MaterialCommunityIcons
@@ -73,7 +76,7 @@ const StackNavigation = () => {
           options={{
             tabBarLabel: 'Favorite',
             tabBarLabelStyle: {color: '#DB3022'},
-            headerShown: false,
+            // headerShown: false,
             tabBarIcon: ({focused}) =>
               focused ? (
                 <MaterialIcons size={24} name="favorite" color={'#DB3022'} />
@@ -93,7 +96,7 @@ const StackNavigation = () => {
           options={{
             tabBarLabel: 'Profile',
             tabBarLabelStyle: {color: '#DB3022'},
-            headerShown: false,
+            // headerShown: false,
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Ionicons size={24} name="person" color={'#DB3022'} />
@@ -128,6 +131,21 @@ const StackNavigation = () => {
           name="Info"
           component={ProductInfoScreen}
           options={{headerShown: false}}
+        />
+        {/* <Stack.Screen
+          name="AddNewAddress"
+          component={AddAddressScreen}
+          options={{headerShown: false}}
+        /> */}
+        {/* <Stack.Screen
+          name="AddingNew"
+          component={AddingNewAddress}
+          options={{headerShown: false}}
+        /> */}
+        <Stack.Screen 
+        name='Conf'
+        component={ConformationScreen}
+        options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>

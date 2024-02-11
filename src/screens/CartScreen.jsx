@@ -4,13 +4,13 @@ import {
   View,
   ScrollView,
   Pressable,
-  TextInput,
   Image,
   SafeAreaView,
 } from 'react-native';
 import React from 'react';
 import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useDispatch, useSelector} from 'react-redux';
 import {
   decrementQuantity,
@@ -41,45 +41,22 @@ const CartScreen = () => {
       {/* <SafeAreaView style={{backgroundColor: '#891811', flex: 0}} /> */}
       <SafeAreaView />
       <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false}>
-        <View
+        {/* <Text
           style={{
-            backgroundColor: '#891811',
-            padding: 10,
-            flexDirection: 'row',
-            alignItems: 'center',
+            fontSize: 34,
+            fontWeight: '700',
+            paddingVertical: 10,
+            paddingHorizontal: 20,
           }}>
-          <Pressable
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              marginHorizontal: 7,
-              gap: 10,
-              backgroundColor: 'white',
-              borderRadius: 3,
-              height: 38,
-              flex: 1,
-            }}>
-            <AntDesign
-              style={{paddingLeft: 10}}
-              name="search1"
-              size={22}
-              color="black"
-            />
-            <TextInput placeholder="Search on e.comfy.in" />
-          </Pressable>
+          My Bag
+        </Text> */}
 
-          <Feather name="mic" size={24} color="white" />
-        </View>
-
-        <View style={{padding: 10, flexDirection: 'row', alignItems: 'center'}}>
+        {/* <View style={{padding: 10, flexDirection: 'row', alignItems: 'center'}}>
           <Text style={{fontSize: 18, fontWeight: '500'}}>Subtotal : </Text>
           <Text style={{fontSize: 20, fontWeight: 'bold'}}>{total}</Text>
-        </View>
-        <Text style={{marginHorizontal: 10, fontSize: 14, fontWeight: '500'}}>
-          EMI details Available
-        </Text>
+        </View> */}
 
-        <Pressable
+        {/* <Pressable
           onPress={() => navigation.navigate('Confirm')}
           style={{
             backgroundColor: '#DB3022',
@@ -93,66 +70,99 @@ const CartScreen = () => {
           <Text style={{color: 'white', fontSize: 16, fontWeight: '700'}}>
             Proceed to Buy ({cart.length}) items
           </Text>
-        </Pressable>
+        </Pressable> */}
 
-        <Text
+        {/* <Text
           style={{
             height: 1,
             borderColor: '#D0D0D0',
             borderWidth: 1,
             marginTop: 16,
           }}
-        />
-
-        <View style={{marginHorizontal: 10}}>
+        /> */}
+        <View style={{paddingVertical: 7}} />
+        <View style={{alignItems: 'center'}}>
           {cart?.map((item, index) => (
-            <View
-              style={{
-                backgroundColor: 'white',
-                marginVertical: 10,
-                borderBottomColor: '#F0F0F0',
-                borderWidth: 2,
-                borderLeftWidth: 0,
-                borderTopWidth: 0,
-                borderRightWidth: 0,
-              }}
-              key={index}>
-              <Pressable
+            <View style={{}} key={index}>
+              <View
                 style={{
-                  marginVertical: 10,
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
+                  backgroundColor: '#fff',
+                  height: 140,
+                  width: 345,
+                  borderRadius: 8,
+                  shadowColor: '#522622',
+                  shadowOffset: {width: 0, height: 1},
+                  shadowOpacity: 0.2,
+                  shadowRadius: 3,
                 }}>
-                <View>
-                  <Image
-                    style={{width: 140, height: 140, resizeMode: 'contain'}}
-                    source={{uri: item?.image}}
-                  />
-                </View>
+                <Image
+                  style={{width: 140, height: 140, resizeMode: 'contain'}}
+                  source={{uri: item?.image}}
+                />
+                <Text
+                  numberOfLines={1}
+                  style={{
+                    position: 'absolute',
+                    width: 450,
+                    fontSize: 19,
+                    fontWeight: '600',
+                    paddingHorizontal: 140,
+                    paddingVertical: 11,
+                  }}>
+                  {item?.title}
+                </Text>
 
-                <View>
-                  <Text numberOfLines={3} style={{width: 150, marginTop: 10}}>
-                    {item?.title}
+                <View
+                  style={{
+                    position: 'absolute',
+                    paddingHorizontal: 140,
+                    paddingVertical: 40,
+
+                    gap: 60,
+                    flexDirection: 'row',
+                  }}>
+                  <Text
+                    style={{
+                      fontSize: 13,
+                      fontWeight: '600',
+                      color: 'gray',
+                      width: 50,
+                      height: 40,
+                    }}>
+                    Color: {item?.color}
                   </Text>
                   <Text
-                    style={{fontSize: 20, fontWeight: 'bold', marginTop: 6}}>
-                    {item?.price}
+                    style={{
+                      fontSize: 13,
+                      fontWeight: '600',
+                      color: 'gray',
+                      width: 60,
+                      height: 50,
+                    }}>
+                    Size: {item?.size}
                   </Text>
-                  <Image
-                    style={{width: 70, height: 30, resizeMode: 'contain'}}
-                    source={require('../assets/logo.png')}
-                  />
-                  <Text style={{color: '#DB3022'}}>In Stock</Text>
                 </View>
-              </Pressable>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontWeight: '600',
+                    color: '#222',
+                    paddingHorizontal: 140,
+                    paddingVertical: 75,
+                    position: 'absolute',
+                  }}>
+                  ${item?.price}
+                </Text>
+              </View>
 
               <Pressable
                 style={{
-                  marginTop: 15,
-                  marginBottom: 10,
+                  paddingHorizontal: 120,
+                  paddingVertical: 90,
                   flexDirection: 'row',
                   alignItems: 'center',
                   gap: 10,
+                  position: 'absolute',
                 }}>
                 <View
                   style={{
@@ -160,37 +170,34 @@ const CartScreen = () => {
                     alignItems: 'center',
                     paddingHorizontal: 10,
                     paddingVertical: 5,
-                    borderRadius: 7,
                   }}>
                   {item?.quantity > 1 ? (
                     <Pressable
                       onPress={() => decreaseQuantity(item)}
                       style={{
-                        backgroundColor: '#D8D8D8',
-                        padding: 7,
-                        borderTopLeftRadius: 6,
-                        borderBottomLeftRadius: 6,
+                        padding: 10,
                       }}>
-                      <AntDesign name="minus" size={24} color="black" />
+                      <AntDesign name="minuscircle" size={24} color="#DB3022" />
                     </Pressable>
                   ) : (
                     <Pressable
                       onPress={() => deleteItem(item)}
                       style={{
-                        backgroundColor: '#D8D8D8',
-                        padding: 7,
-                        borderTopLeftRadius: 6,
-                        borderBottomLeftRadius: 6,
+                        paddingHorizontal: 8,
+                        paddingVertical: 8,
                       }}>
-                      <AntDesign name="delete" size={24} color="black" />
+                      <MaterialCommunityIcons
+                        name="delete-circle"
+                        size={30}
+                        color="#DB3022"
+                      />
                     </Pressable>
                   )}
 
                   <Pressable
                     style={{
-                      backgroundColor: 'white',
-                      paddingHorizontal: 18,
-                      paddingVertical: 6,
+                      paddingHorizontal: 8,
+                      paddingVertical: 8,
                     }}>
                     <Text>{item?.quantity}</Text>
                   </Pressable>
@@ -198,62 +205,60 @@ const CartScreen = () => {
                   <Pressable
                     onPress={() => increaseQuantity(item)}
                     style={{
-                      backgroundColor: '#D8D8D8',
-                      padding: 7,
-                      borderTopLeftRadius: 6,
-                      borderBottomLeftRadius: 6,
+                      paddingHorizontal: 8,
+                      paddingVertical: 8,
                     }}>
-                    <Feather name="plus" size={24} color="black" />
+                    <AntDesign name="pluscircle" size={24} color="#DB3022" />
                   </Pressable>
                 </View>
                 <Pressable
                   onPress={() => deleteItem(item)}
                   style={{
-                    backgroundColor: 'white',
-                    paddingHorizontal: 8,
-                    paddingVertical: 10,
-                    borderRadius: 5,
-                    borderColor: '#C0C0C0',
-                    borderWidth: 0.6,
+                    paddingHorizontal: 40,
+                    paddingVertical: 8,
                   }}>
-                  <Text>Delete</Text>
+                  <MaterialCommunityIcons
+                    name="delete-circle"
+                    size={30}
+                    color="#DB3022"
+                  />
                 </Pressable>
               </Pressable>
-
-              <Pressable
-                style={{
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  gap: 10,
-                  marginBottom: 15,
-                }}>
-                <Pressable
-                  style={{
-                    backgroundColor: 'white',
-                    paddingHorizontal: 8,
-                    paddingVertical: 10,
-                    borderRadius: 5,
-                    borderColor: '#C0C0C0',
-                    borderWidth: 0.6,
-                  }}>
-                  <Text>Save For Later</Text>
-                </Pressable>
-
-                <Pressable
-                  style={{
-                    backgroundColor: 'white',
-                    paddingHorizontal: 8,
-                    paddingVertical: 10,
-                    borderRadius: 5,
-                    borderColor: '#C0C0C0',
-                    borderWidth: 0.6,
-                  }}>
-                  <Text>See More Like this</Text>
-                </Pressable>
-              </Pressable>
+              <View style={{paddingVertical: 8}} />
             </View>
           ))}
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: 135,
+            }}>
+            <View>
+              <Text style={{color: 'gray', fontSize: 14, fontWeight: '500'}}>
+                Total Price
+              </Text>
+              <Text style={{fontSize: 16, fontWeight: 'bold'}}>
+                ${Math.trunc(total)}.99
+              </Text>
+            </View>
+
+            <Pressable
+              onPress={() => navigation.navigate('Conf')}
+              style={{
+                height: 35,
+                width: 134,
+                backgroundColor: '#DB3022',
+                borderRadius: 25,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Text style={{fontSize: 16, fontWeight: 'bold', color: 'white'}}>
+                Place Order
+              </Text>
+            </Pressable>
+          </View>
         </View>
+        <View style={{paddingBottom: 20}} />
       </ScrollView>
     </>
   );

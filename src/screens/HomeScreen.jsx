@@ -27,8 +27,8 @@ const HomeScreen = () => {
       title:
         'Oppo Enco Air3 Pro True Wireless in Ear Earbuds with Industry First Composite Bamboo Fiber, 49dB ANC, 30H Playtime, 47ms Ultra Low Latency,Fast Charge,BT 5.3 (Green)',
       offer: '72% off',
-      oldPrice: 7500,
-      price: 4500,
+      oldPrice: 75,
+      price: 56,
       image:
         'https://m.media-amazon.com/images/I/61a2y1FCAJL._AC_UL640_FMwebp_QL65_.jpg',
       carouselImages: [
@@ -45,8 +45,8 @@ const HomeScreen = () => {
       title:
         'Fastrack Limitless FS1 Pro Smart Watch|1.96 Super AMOLED Arched Display with 410x502 Pixel Resolution|SingleSync BT Calling|NitroFast Charging|110+ Sports Modes|200+ Watchfaces|Upto 7 Days Battery',
       offer: '40%',
-      oldPrice: 7955,
-      price: 3495,
+      oldPrice: 79,
+      price: 43,
       image: 'https://m.media-amazon.com/images/I/41mQKmbkVWL._AC_SY400_.jpg',
       carouselImages: [
         'https://m.media-amazon.com/images/I/71h2K2OQSIL._SX679_.jpg',
@@ -60,8 +60,8 @@ const HomeScreen = () => {
       id: '2',
       title: 'Aishwariya System On Ear Wireless On Ear Bluetooth Headphones',
       offer: '40%',
-      oldPrice: 7955,
-      price: 3495,
+      oldPrice: 90,
+      price: 49,
       image: 'https://m.media-amazon.com/images/I/41t7Wa+kxPL._AC_SY400_.jpg',
       carouselImages: ['https://m.media-amazon.com/images/I/41t7Wa+kxPL.jpg'],
       color: 'black',
@@ -72,8 +72,8 @@ const HomeScreen = () => {
       title:
         'Fastrack Limitless FS1 Pro Smart Watch|1.96 Super AMOLED Arched Display with 410x502 Pixel Resolution|SingleSync BT Calling|NitroFast Charging|110+ Sports Modes|200+ Watchfaces|Upto 7 Days Battery',
       offer: '40%',
-      oldPrice: 24999,
-      price: 19999,
+      oldPrice: 500,
+      price: 275,
       image: 'https://m.media-amazon.com/images/I/71k3gOik46L._AC_SY400_.jpg',
       carouselImages: [
         'https://m.media-amazon.com/images/I/41bLD50sZSL._SX300_SY300_QL70_FMwebp_.jpg',
@@ -88,8 +88,8 @@ const HomeScreen = () => {
     {
       id: '20',
       title: 'OnePlus Nord CE 3 Lite 5G (Pastel Lime, 8GB RAM, 128GB Storage)',
-      oldPrice: 25000,
-      price: 19000,
+      oldPrice: 450,
+      price: 300,
       image:
         'https://images-eu.ssl-images-amazon.com/images/G/31/wireless_products/ssserene/weblab_wf/xcm_banners_2022_in_bau_wireless_dec_580x800_once3l_v2_580x800_in-en.jpg',
       carouselImages: [
@@ -105,8 +105,8 @@ const HomeScreen = () => {
       id: '30',
       title:
         'Samsung Galaxy S20 FE 5G (Cloud Navy, 8GB RAM, 128GB Storage) with No Cost EMI & Additional Exchange Offers',
-      oldPrice: 74000,
-      price: 26000,
+      oldPrice: 560,
+      price: 340,
       image:
         'https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/Samsung/SamsungBAU/S20FE/GW/June23/BAU-27thJune/xcm_banners_2022_in_bau_wireless_dec_s20fe-rv51_580x800_in-en.jpg',
       carouselImages: [
@@ -122,8 +122,8 @@ const HomeScreen = () => {
       id: '40',
       title:
         'Samsung Galaxy M14 5G (ICY Silver, 4GB, 128GB Storage) | 50MP Triple Cam | 6000 mAh Battery | 5nm Octa-Core Processor | Android 13 | Without Charger',
-      oldPrice: 16000,
-      price: 14000,
+      oldPrice: 240,
+      price: 200,
       image:
         'https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/Samsung/CatPage/Tiles/June/xcm_banners_m14_5g_rv1_580x800_in-en.jpg',
       carouselImages: [
@@ -138,8 +138,8 @@ const HomeScreen = () => {
       id: '40',
       title:
         'realme narzo N55 (Prime Blue, 4GB+64GB) 33W Segment Fastest Charging | Super High-res 64MP Primary AI Camera',
-      oldPrice: 12999,
-      price: 10999,
+      oldPrice: 200,
+      price: 138,
       image:
         'https://images-eu.ssl-images-amazon.com/images/G/31/tiyesum/N55/June/xcm_banners_2022_in_bau_wireless_dec_580x800_v1-n55-marchv2-mayv3-v4_580x800_in-en.jpg',
       carouselImages: [
@@ -201,7 +201,7 @@ const HomeScreen = () => {
                 marginHorizontal: 7,
                 gap: 10,
                 backgroundColor: 'white',
-                borderRadius: 3,
+                borderRadius: 25,
                 height: 38,
                 flex: 1,
               }}>

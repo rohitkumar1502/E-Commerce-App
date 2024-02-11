@@ -36,3 +36,6 @@ dbConnection();
 app.get('/', (req, res) => {
   res.send(`<h1>ecomzonefy default page</h1>`);
 });
+app.get('/addresses', (req, res) => {
+  res.send(`<h1>ecomzonefy Address page</h1>`);
+});
