@@ -50,7 +50,7 @@ const AddAddressScreen = () => {
     fetchAddresses();
   }, []);
 
-  //refresh the addresses when the component comes to the focus ie basically when we navigate back
+  //refresh the addresses
   useFocusEffect(
     useCallback(() => {
       fetchAddresses();

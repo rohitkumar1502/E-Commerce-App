@@ -19,8 +19,9 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import ProductInfoScreen from '../screens/ProductInfoScreen';
 import ConformationScreen from '../screens/ConformationScreen';
-// import AddAddressScreen from '../screens/AddAddressScreen';
-// import AddingNewAddress from '../screens/AddingNewAddress';
+import AddAddressScreen from '../screens/AddAddressScreen';
+import AddingNewAddress from '../screens/AddingNewAddress';
+import OrderScreen from '../screens/OrderScreen';
 
 // initialRouteName="Login"
 
@@ -132,20 +133,25 @@ const StackNavigation = () => {
           component={ProductInfoScreen}
           options={{headerShown: false}}
         />
-        {/* <Stack.Screen
+        <Stack.Screen
           name="AddNewAddress"
           component={AddAddressScreen}
           options={{headerShown: false}}
-        /> */}
-        {/* <Stack.Screen
+        />
+        <Stack.Screen
           name="AddingNew"
           component={AddingNewAddress}
           options={{headerShown: false}}
-        /> */}
-        <Stack.Screen 
-        name='Conf'
-        component={ConformationScreen}
-        options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Conf"
+          component={ConformationScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Order"
+          component={OrderScreen}
+          options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>

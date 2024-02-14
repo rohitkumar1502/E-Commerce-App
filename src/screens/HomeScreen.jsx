@@ -173,9 +173,7 @@ const HomeScreen = () => {
 
     fetchData();
   }, []);
-  const onGenderOpen = useCallback(() => {
-    setCompanyOpen(false);
-  }, []);
+  const onGenderOpen = useCallback(() => {}, []);
 
   const cart = useSelector(state => state.cart.cart);
   return (

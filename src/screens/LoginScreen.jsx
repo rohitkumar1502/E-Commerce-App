@@ -28,7 +28,7 @@ const LoginScreen = () => {
         const token = await AsyncStorage.getItem('authToken');
 
         if (token) {
-          navigation.replace('');
+          navigation.replace('Main');
         }
       } catch (err) {
         console.log('error message', err);
